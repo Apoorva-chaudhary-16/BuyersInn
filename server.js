@@ -25,7 +25,7 @@ app.use("/api/v1/auth", authRoutes);
 
 //rest api
 app.get("/", (req, res) => {
-  res.send("<h1>Welcome to ecommerce app</h1>");
+  res.send("<h1>Welcome to BuyersInn (from server side)</h1>");
 });
 
 //PORT
