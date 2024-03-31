@@ -30,7 +30,7 @@ const Login = () => {
           token: res.data.token,
         });
         localStorage.setItem("auth", JSON.stringify(res.data));
-        toast.success('login successfully');
+        toast.success('login successfully','4000');
         navigate(location.state || "/");
       } else {
         toast.error(res.data.message);
