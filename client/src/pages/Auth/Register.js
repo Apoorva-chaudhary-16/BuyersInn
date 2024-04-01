@@ -11,6 +11,7 @@ const Register = () => {
     const[email,setEmail]=useState("");
     const[password,setPassword]=useState("");
     const[phone,setPhone]=useState("");
+    const[answer,setAnswer]=useState("");
     const[address,setAddress]=useState("");
     const navigate = useNavigate();
 
@@ -19,9 +20,9 @@ const Register = () => {
         e.preventDefault();
         try{
             const res= await axios.post(`${process.env.REACT_APP_API}/api/v1/auth/register`,
-            {name,email,password,phone,address});
-            if (res && res.data.success) {
-                toast.success(res.data && res.data.message);
+            {name,email,password,phone,answer,address});
+            if (res && res.data?.success) {
+                toast.success(res.data && res.data?.message || "Registered Successfully");
                 navigate("/login");
               } else {
                 toast.error(res.data.message);
@@ -31,7 +32,6 @@ const Register = () => {
             console.log(error);
             toast.error("Somthing went wrong");
         }
-        toast.success("Registered Successfully");
     }
     return (
         <Layout title={"SignUp"}>
@@ -82,6 +82,17 @@ const Register = () => {
                         class="form-control"
                         id="exampleInputPassword1"
                         placeholder='Password'
+                        required
+                         />
+                    </div>
+                    <div class="mb-3">
+                        
+                        <input type="text"
+                        value={answer}
+                        onChange={(e)=>{setAnswer(e.target.value)}}
+                        class="form-control"
+                        id="exampleInputAnswer"
+                        placeholder='what is your favorite book?'
                         required
                          />
                     </div>
