@@ -208,7 +208,7 @@ export const productFiltersController = async (req, res) => {
     console.log(error);
     res.status(400).send({
       success: false,
-      message: "Error While Filtering Products",
+      message: "Error WHile Filtering Products",
       error,
     });
   }
