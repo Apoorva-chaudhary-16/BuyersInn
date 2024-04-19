@@ -21,6 +21,7 @@ const ForgotPasssword = () => {
         newPassword,
         answer,
       });
+      
       if (res && res.data.success) {
         toast.success(res.data && res.data.message);
 
