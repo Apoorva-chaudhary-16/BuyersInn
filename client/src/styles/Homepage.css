@@ -1,5 +1,33 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  height: 100%;
+  z-index: -1;
+}
 .banner-img {
     margin-top: 60px;
+   /* position: absolute;
+    z-index: -1;
+    transform: translateZ(-20px) scale(3);*/
+  }
+  .text{
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%) ;
+    z-index: 1;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
   
   .home-page h1 {

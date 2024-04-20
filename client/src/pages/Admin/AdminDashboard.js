@@ -2,12 +2,20 @@ import React from "react";
 import AdminMenu from "../../components/Layout/AdminMenu";
 import Layout from "./../../components/Layout/Layout";
 import { useAuth } from "../../context/auth";
+import "../../styles/AdminDashboard.css";
 const AdminDashboard = () => {
   const [auth] = useAuth();
   return (
     <Layout>
       <div className="container-fluid m-3 p-3 dashboard">
         <div className="row">
+        <img
+        src="/images/Administrator.png"
+        className="banner-img"
+        alt="bannerimage"
+        width={"50%"}
+       
+      />
           <div className="col-md-3">
             <AdminMenu />
           </div>

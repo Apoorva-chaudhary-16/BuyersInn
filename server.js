@@ -25,7 +25,7 @@ app.use(morgan("dev"));
 //routes
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/category", categoryRoutes);
-app.use("/api/v1/product",productRoutes);
+app.use(`${process.env.REACT_APP_API}/api/v1/product`,productRoutes);
 
 //rest api
 app.get("/", (req, res) => {
