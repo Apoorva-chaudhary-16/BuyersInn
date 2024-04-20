@@ -8,6 +8,11 @@ import toast from "react-hot-toast";
 import Layout from "./../components/Layout/Layout";
 import { AiOutlineReload } from "react-icons/ai";
 import "../styles/Homepage.css";
+import aa from "../banner.png"
+import aa2 from "../banner-photo.jpg"
+import aa3 from "../contact.jpeg"
+
+
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -19,7 +24,8 @@ const HomePage = () => {
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
-
+  //changing images
+  const [currentImage, setCurrentImage] = useState(null);
   //get all cat
   const getAllCategory = async () => {
     try {
@@ -108,16 +114,29 @@ const HomePage = () => {
   useEffect(() => {
     if (checked.length || radio.length) filterProduct();
   }, [checked, radio]);
+
+  //changing images
+  const images = [aa, aa2, aa3];
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+        setCurrentImage(images[Math.floor(Math.random() * images.length)]);
+    }, 5000)
+    
+    return () => clearInterval(intervalId);
+}, []);
+
   
   return (
     <Layout title={"All Products - Best offers "}>
       {/* banner image */}
-      <img
-        src="/images/banner-photo.jpg"
-        className="banner-img"
-        alt="bannerimage"
-        width={"100%"}
-      />
+      <div>
+            <img src={currentImage}
+            alt="moving images"
+            className="banner-img"
+            width={"100%"}
+             />
+        </div>
+    
       {/* banner image */}
       <div className="container-fluid row mt-3 home-page">
         <div className="col-md-3 filters">
