@@ -22,6 +22,7 @@ const CreateProduct = () => {
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(`${process.env.REACT_APP_API}/api/v1/category/get-category`);
+    console.log(data);
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -47,9 +48,10 @@ const CreateProduct = () => {
       productData.append("photo", photo);
       productData.append("category", category);
       const { data } = axios.post(
-        "/api/v1/product/create-product",
+        `${process.env.REACT_APP_API}/api/v1/product/create-product`,
         productData
       );
+      console.log(data);
       if (data?.success) {
         toast.error(data?.message);
       } else {

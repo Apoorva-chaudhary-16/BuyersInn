@@ -1,7 +1,7 @@
 import userModel from "../models/userModel.js";
+import orderModel from "../models/orderModel.js";
 import { comparePassword, hashPassword } from "./../helpers/authHelper.js";
 import JWT from "jsonwebtoken";
-import orderModel from "../models/orderModel.js";
 
 export const registerController = async (req, res) => {
   try {
@@ -207,7 +207,7 @@ export const getOrdersController = async (req, res) => {
     console.log(error);
     res.status(500).send({
       success: false,
-      message: "Error WHile Geting Orders",
+      message: "Error While Geting Orders",
       error,
     });
   }
@@ -225,7 +225,7 @@ export const getAllOrdersController = async (req, res) => {
     console.log(error);
     res.status(500).send({
       success: false,
-      message: "Error While Geting Orders",
+      message: "Error WHile Geting Orders",
       error,
     });
   }

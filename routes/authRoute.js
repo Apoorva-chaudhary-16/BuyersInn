@@ -4,8 +4,8 @@ import {
   loginController,
   testController,
   forgotPasswordController,
-  updateProfileController,
   getOrdersController,
+  updateProfileController,
   getAllOrdersController,
   orderStatusController,
 } from "../controllers/authController.js";
@@ -14,6 +14,8 @@ import { isAdmin, requireSignIn } from "../middlewares/authMiddleware.js";
 
 //router object
 const router = express.Router();
+
+router.get("/",(req,res)=>{res.json({msg:"hiii"})})
 
 //routing
 //REGISTER || METHOD POST
@@ -38,8 +40,8 @@ router.get('/admin-auth',requireSignIn,isAdmin,(req,res)=>{
 //Forgot Password || POST
 router.post('/forgot-password',forgotPasswordController);
 
-//Update profile
-router.put('/profile',requireSignIn,updateProfileController);
+//update profile
+router.put("/profile", requireSignIn, updateProfileController);
 
 //orders
 router.get("/orders", requireSignIn, getOrdersController);
