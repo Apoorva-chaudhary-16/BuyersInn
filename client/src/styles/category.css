@@ -1,0 +1,24 @@
+.card a{
+    
+  
+    font-size: medium;
+    border: 2px solid rgb(137, 165, 142);
+    border-radius: 50%;
+    font-size: 20px;
+    color: rgb(29, 113, 119);
+    text-decoration:navy;
+    margin:0px;
+}
+.card a:hover{
+    background:rgb(3, 15, 70);
+    color: #d1dae0;
+    box-shadow: 0 0 15.50px rgb(21, 62, 65);
+}
+.btn cat-btn {
+    background-position: left bottom;
+    color: white;
+    border:none;
+    box-shadow: 0 0 20px rgb(245,45,45);
+}
+
+
