@@ -8,9 +8,9 @@ import toast from "react-hot-toast";
 import Layout from "./../components/Layout/Layout";
 import { AiOutlineReload } from "react-icons/ai";
 import "../styles/Homepage.css";
-import aa from "../banner.png"
+import aa from "../aa2.jpg"
 import aa2 from "../banner-photo.jpg"
-import aa3 from "../contact.jpeg"
+import aa3 from "../aa3.jpg"
 
 
 

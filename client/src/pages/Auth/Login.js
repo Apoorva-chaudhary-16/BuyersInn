@@ -42,8 +42,8 @@ const Login = () => {
   };
   return (
     <Layout title="Login - BuyersInn">
-      <div className="form-container " style={{ minHeight: "90vh" }}>
-        <form onSubmit={handleSubmit}>
+      <div className="form-container login-page-background" style={{ minHeight: "90vh" }}>
+        <form onSubmit={handleSubmit} className="login-form">
           <h4 className="title">LOGIN FORM</h4>
 
           <div className="mb-3">
