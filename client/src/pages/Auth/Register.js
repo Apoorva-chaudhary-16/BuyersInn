@@ -36,8 +36,8 @@ const Register = () => {
     return (
         <Layout title={"SignUp"}>
             <div className='form-container'>
-                <h1>Register</h1>
                 <form onSubmit={handleSubmit}>
+                <h1>Register</h1>
                     <div class="mb-3">
                         <input type="text"
                          value={name}

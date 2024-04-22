@@ -3,6 +3,7 @@ import orderModel from "../models/orderModel.js";
 import { comparePassword, hashPassword } from "./../helpers/authHelper.js";
 import JWT from "jsonwebtoken";
 
+
 export const registerController = async (req, res) => {
   try {
     const { name, email, password, phone,answer, address } = req.body;
@@ -13,11 +14,12 @@ export const registerController = async (req, res) => {
     if (!email) {
       return res.send({ error: "Email is Required" });
     }
-    if (!password) {
-      return res.send({ error: "Password is Required" });
+    if (!password ) {
+      return res.send({ error: "Password is Required " });
     }
-    if (!phone) {
-      return res.send({ error: "Phone no is Required" });
+    if (!phone || phone.length!=10 ) {
+     
+      return res.send({ error: "Phone no is Required and must be 10 digits long" });
     }
     if (!answer) {
       return res.send({ error: "Answer no is Required" });
