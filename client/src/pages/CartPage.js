@@ -20,6 +20,8 @@ const CartPage = () => {
   //total price
   const totalPrice = () => {
     try {
+      console.log(cart)
+      console.log(localStorage.getItem("cart"))
       let total = 0;
       cart?.map((item) => {
         total = total + item.price;
@@ -67,6 +69,7 @@ const CartPage = () => {
         nonce,
         cart,
       });
+      
       setLoading(false);
       localStorage.removeItem("cart");
       setCart([]);
@@ -77,6 +80,7 @@ const CartPage = () => {
       setLoading(false);
     }
   };
+
   return (
     <Layout>
       <div className=" cart-page">
@@ -102,6 +106,7 @@ const CartPage = () => {
               {cart?.map((p) => (
                 <div className="row card flex-row" key={p._id}>
                   <div className="col-md-4">
+                    
                     <img
                       src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
                       className="card-img-top"
@@ -110,6 +115,10 @@ const CartPage = () => {
                       height={"130px"}
                     />
                   </div>
+               
+
+                 
+               
                   <div className="col-md-4">
                     <p>{p.name}</p>
                     <p>{p.description.substring(0, 30)}</p>
@@ -162,7 +171,7 @@ const CartPage = () => {
                         })
                       }
                     >
-                      Please Login to checkout
+                      Plase Login to checkout
                     </button>
                   )}
                 </div>
@@ -181,8 +190,6 @@ const CartPage = () => {
                       }}
                       onInstance={(instance) => setInstance(instance)}
                     />
-
-                   
 
                     <button
                       className="btn btn-primary"
