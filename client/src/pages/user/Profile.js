@@ -56,8 +56,8 @@ const Profile = () => {
       <div className="container-fluid m-3 p-3 dashboard">
         <div className="row">
           <div className="col-md-3">
-           
-            <SidebarUser/>
+            
+            <SidebarUser />
           </div>
           <div className="col-md-8">
             <div className="form-container" style={{ marginTop: "-40px" }}>
