@@ -4,6 +4,7 @@ import Layout from "./../../components/Layout/Layout";
 import { useAuth } from "../../context/auth";
 import toast from "react-hot-toast";
 import axios from "axios";
+import SidebarUser from '../../components/SidebarUser';
 const Profile = () => {
   //context
   const [auth, setAuth] = useAuth();
@@ -55,7 +56,8 @@ const Profile = () => {
       <div className="container-fluid m-3 p-3 dashboard">
         <div className="row">
           <div className="col-md-3">
-            <UserMenu />
+           
+            <SidebarUser/>
           </div>
           <div className="col-md-8">
             <div className="form-container" style={{ marginTop: "-40px" }}>
