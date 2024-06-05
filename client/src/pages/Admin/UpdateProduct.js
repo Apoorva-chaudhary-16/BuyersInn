@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 import axios from "axios";
 import { Select } from "antd";
 import { useNavigate, useParams } from "react-router-dom";
+import Sidebar from "../../components/Sidebar";
 const { Option } = Select;
 
 const UpdateProduct = () => {
@@ -106,7 +107,7 @@ const UpdateProduct = () => {
       <div className="container-fluid m-3 p-3">
         <div className="row">
           <div className="col-md-3">
-            <AdminMenu />
+          <Sidebar/>
           </div>
           <div className="col-md-9">
             <h1>Update Product</h1>

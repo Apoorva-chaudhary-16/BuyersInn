@@ -4,6 +4,7 @@ import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 import Sidebar from '../../components/Sidebar';
 import "../../styles/Products.css"; // Import your CSS file
+import Layout from "../../components/Layout/Layout";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -25,6 +26,7 @@ const Products = () => {
   }, []);
 
   return (
+    <Layout>
     <div className="products-container">
       <Sidebar />
       <div className="products-list">
@@ -40,7 +42,7 @@ const Products = () => {
                 <img
                   src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${product._id}`}
                   alt={product.name}
-                  className="product-image"
+                  className="product-image-admin"
                 />
                 <div className="product-details">
                   <h3 className="product-name">{product.name}</h3>
@@ -52,6 +54,7 @@ const Products = () => {
         </div>
       </div>
     </div>
+    </Layout>
   );
 };
 

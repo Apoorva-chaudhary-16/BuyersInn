@@ -13,7 +13,7 @@ const AdminOrders = () => {
     "Processing",
     "Shipped",
     "Delivered",
-    "Cancelled", // Corrected spelling
+    "Cancelled", 
   ]);
   const [orders, setOrders] = useState([]);
   
@@ -79,7 +79,7 @@ const AdminOrders = () => {
                   </Select>
                 </td>
                 <td>{order.buyer.name}</td>
-                <td>{moment(order.createAt).fromNow()}</td>
+                <td>{moment(order.createdAt).fromNow()}</td> 
                 <td>{order.payment.success ? "Success" : "Failed"}</td>
                 <td>
                   {order.products.map((product) => (

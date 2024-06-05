@@ -82,7 +82,7 @@ export default function BasicTable() {
                 </TableCell>
                 <TableCell align="left">{order.createdAt}</TableCell>
                 <TableCell align="left" className="Details">
-                  <Link to={`/orders/${order._id}`}>Details</Link>
+                  <Link to={`/dashboard/admin/orders`}>Details</Link>
                 </TableCell>
               </TableRow>
             ))}

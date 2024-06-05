@@ -3,7 +3,7 @@
   }
   
   .orders-table {
-    margin-left: 250px; /* Adjust this value to match the Sidebar width */
+    margin-left: 200px; /* Adjust this value to match the Sidebar width */
   }
   
   .table-title {
@@ -34,7 +34,7 @@
     padding-left: 15px;
   }
   .product-image {
-    width: 100px; /* Adjust the width as needed */
-    height: 100px; /* Adjust the height as needed */
-    margin-right: 10px; /* Adjust the margin as needed */
+    width: 100px; 
+    height: 100px; 
+    margin-right: 10px; 
   }

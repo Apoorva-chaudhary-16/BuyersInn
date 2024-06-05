@@ -129,11 +129,12 @@ const HomePage = () => {
   return (
     <Layout title={"All Products - Best offers "}>
       {/* banner image */}
-      <div>
+      <div className="imgg">
             <img src={currentImage}
             alt="moving images"
             className="banner-img"
             width={"100%"}
+            
              />
         </div>
     

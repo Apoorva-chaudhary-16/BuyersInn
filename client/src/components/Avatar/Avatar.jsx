@@ -1,11 +1,9 @@
-
-import "../Avatar/Avatar.css"
-
-
 import React from "react";
+import "../Avatar/Avatar.css";
 
-const Avatar = ({ imageUrl, altText }) => {
-  return <img src={"../../img1.png"} alt={"profile photo"} className="avatar" />;
+const Avatar = ({ imageUrl, altText }) =>  {
+  return
 };
+
 
 export default Avatar;

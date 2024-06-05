@@ -7,8 +7,6 @@ import {
     UilUsdSquare,
     UilMoneyWithdrawal,
     
-    
-
 } from '@iconscout/react-unicons';
 import img1 from '../imgs/img1.png'
 import img2 from '../imgs/img2.png'
@@ -27,9 +25,6 @@ export const SidebarData = [
         icon:UilClipboardAlt,
         heading:'Orders',
         path: "/dashboard/admin/orders"
-    },{
-        icon:UilUsersAlt,
-        heading:'Customers',
     },
     {
         icon:UilPackage,
